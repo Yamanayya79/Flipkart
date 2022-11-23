@@ -1,0 +1,633 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    /* position: fixed; */
+    background-color: #2874f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.plus {
+    color: yellow;
+}
+
+.logo p {
+    color: white;
+    position: relative;
+    top: -5px;
+}
+
+.search {
+    background-color: white;
+    padding: 8px;
+    width: 500px;
+    height: 21px;
+    margin: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.search input {
+    width: 405px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.login {
+    padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    outline: none;
+}
+
+.nav-link {
+    margin: 0px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover .icon1 i {
+    font-size: 10px;
+
+}
+
+.icon1:hover {
+    /* transform: 1.5sec; */
+    transform: rotate(-180deg);
+}
+
+.moreoption-continer {
+    position: relative;
+    height: 1px;
+    display: none;
+}
+
+.moreoption-content {
+    position: absolute;
+    margin-top: 30px;
+    box-shadow: -5px 5px 7px rgba(0, 0, 0, 0.1),
+        5px 5px 7px rgba(0, 0, 0, 0.1);
+    color: black;
+    width: 300px;
+    margin-left: 110px;
+    background-color: aqua;
+}
+
+
+
+
+
+.more-option-add {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+
+}
+
+.more-option-add i {
+    font-size: 18px;
+    color: blue;
+}
+
+.more-option-add p {
+    padding-left: 15px;
+
+}
+
+.icon1:hover .moreoption-continer {
+    display: block;
+}
+
+/* =================================================================================================== */
+.top-productnavbar {
+    height: 110px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.top-productnavbar {
+    height: 110px;
+    cursor: pointer;
+    flex: 1;
+
+}
+
+.topproduct-content img {
+    width: 64px;
+    height: 64px;
+    padding: 0px 30px;
+}
+
+.topproduct-content p {
+    font-weight: 510;
+    padding: 8px 30px;
+}
+
+.topproduct-content:hover p {
+    color: blue;
+}
+
+/* =========================crosal================================= */
+.slider {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+
+
+}
+
+.img1 {
+    width: 98.5%;
+    height: 280px;
+    padding: 0px 10px;
+}
+
+.slider_img {
+    display: flex;
+    padding-right: -20px;
+}
+
+.btn_slide {
+    margin: auto;
+    width: 10px;
+
+}
+
+.btn {
+    padding: 30px 15px;
+    background-color: white;
+    font-size: 30px;
+    position: relative;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.right-btn {
+    position: relative;
+    left: -110%;
+}
+
+/* testing  */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(20, 109, 191);
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* * {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+
+
+label {
+	background: #444;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+  min-height: 100%;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 100vh;
+}
+
+form {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+}
+input {
+	position: absolute;
+}
+
+.keys {
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+	transition: all 300ms linear;
+	opacity: 0;
+}
+
+input:focus ~ .keys {
+	opacity: 0.8;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+label {
+	background: #444;
+	background-size: cover;
+	font-size: 3rem;
+}
+
+label[for="diamonds"],
+label[for="hearts"] {
+	background: #cc0000;
+}
+
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+ */
+/* ====================================================Best = */
+/* *{
+    box-sizing: border-box;
+} */
+.best-Electronics-continer {
+    /* background-color: aqua; */
+    height: 350px;
+    display: flex;
+    padding: 15px 0px;
+    justify-content: space-around;
+}
+.best-Electronics-continer1 {
+    /* background-color: aqua; */
+    height: 350px;
+    display: flex;
+    padding: 15px 0px;
+    
+}
+
+.right-part {
+    padding: 2px 10px;
+}
+
+.left-part {
+    height: 100%;
+    width: 75%;
+    /* background-color: rgb(207, 138, 0); */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.left-part1 {
+    height: 100%;
+    width: 75%;
+    /* background-color: rgb(207, 138, 0); */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-part {
+    height: 100%;
+    width: 10%;
+    background-color: rgba(232, 227, 227, 0.911);
+    padding: 0.5em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.viewall-btn {
+    background-color: #2874f0;
+    display: flex;
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    /* box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%); */
+    border: none;
+    padding: 9px 18px;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+
+.left-part-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 25%;
+    font-size: 1rem;
+    border-bottom: 1px solid red;
+}
+
+.left-part-top h1 {
+    margin: 0;
+}
+
+.left-part-top button {
+    margin: 0;
+}
+
+.left-part-containt {
+    padding-bottom: 50px;
+}
+
+.left-part-continer {
+    background-color: blue;
+    height: 50%;
+}
+
+.left-part-top p {
+    margin: 0;
+}
+
+.leftpart-card-conainer {
+    height: 80%;
+    display: flex;
+    transition: 0.5s;
+
+
+}
+
+.card-product {
+    width: 200px;
+    min-width: 200px;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.productImgcontiner {
+    height: 130px;
+
+}
+
+.card-product img {
+    width: 110px;
+    max-width: 150px;
+}
+
+/* hover effet */
+.card-product:hover img {
+    transform: scale(1.1);
+}
+
+.card-product-name {
+    margin: 2px 0;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-product-price {
+    margin: 4px 0;
+    color: #388e3c;
+}
+
+.card-product-dec {
+    margin: 2px 0px;
+}
+
+.card-product-main-continer {
+    display: flex;
+}
+
+.card-btn {
+    position: absolute;
+    padding: 20px 10px;
+    height: 120px;
+    font-size: 2rem;
+    margin: auto 0;
+    background-color: white;
+    border: none;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1),
+        2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 2;
+
+}
+.card-btn-display{
+    display: none;
+
+}
+.card-btn-continer{
+    position: relative;
+    margin: auto;
+    top: -55px;
+
+}
+#card-btn-right{
+    margin-left: -50px;
+}
+.trnslatebody-card{
+    overflow: hidden;
+}
+/* 2nd row of the product */
+.leftpart-card-conainer1{
+    display: flex;
+    width: 75%;
+}
+.card-btn-right1{
+    margin-right: -90%;
+}
+.line{
+    border-bottom: 2px solid white;
+}
+
+/* ======================about flip */
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+.about-flip{
+    color: #848484;
+     font-weight: 500; 
+    margin-top: 14px;
+    padding: 14px 0;
+    background-color: #fff;
+    text-align: left;
+    padding: 10 0px;
+    border-right: 1px solid #333;
+    font-size: 12px;
+}
+.about-flip h3{
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10 0px;
+}
+table{
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 0px;
+    cursor: pointer;
+    background-color: #212121;
+    color: white;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+}
+table tr th{
+    padding: 10px;
+    color: #878787;
+   
+    
+}
+table{
+    border-bottom: 1px solid rgb(207, 188, 188);
+    padding: 25px;
+}
+
+.footer {
+    display: flex;
+   
+   
+}
+.footer div a {
+    text-decoration: none;
+    padding: 5px 25px;
+    background-color: #212121;
+    color: white;
+    width: 100%;
+
+}
