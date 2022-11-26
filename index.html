@@ -11,16 +11,17 @@
     <meta property="og:image:height" content="228">
     <!doctype html>
     <title>Flipkart</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.PG-rxYTQHmL96kHS72cR1AAAAA?pid=ImgDet&w=260&h=260&rs=1" />
     <link rel="stylesheet" href="./flip.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body id="body">
     <!-- Nav bar Started -->
     <nav>
+
         <!-- Logo -->
         <div class="logo">
             <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -193,18 +194,19 @@
 
     </div>
     <br>
-<div id="coupon">
-    <button onclick="closecoupon()" id="couponclose">&times;</button>
-    <br><br>
-    <div id="coupon-contint">
-        <p id="coupon-hhh">50% OFF</p>
-       <h2 id="DISCOUNT">DISCOUNT</h2> 
-       <!-- <h2 id="SPECIAL">SPECIAL<br>OFFER &nbsp;&nbsp; <span class="coupon-contint-circle">50%</span></h2><br> -->
-      
-       <h2 id="DISCOUNT">ONE DAY</h2>
-       <p> Coupon Code #525052500</p>
+    <div id="coupon">
+        <button onclick="closecoupon()" id="couponclose">&times;</button>
+        <br><br>
+        <div id="coupon-contint">
+            <p id="coupon-hhh">50% OFF</p>
+            <h2 id="DISCOUNT">DISCOUNT</h2>
+            <!-- <h2 id="SPECIAL">SPECIAL<br>OFFER &nbsp;&nbsp; <span class="coupon-contint-circle">50%</span></h2><br> -->
+
+            <h2 id="DISCOUNT">ONE DAY</h2>
+            <p id="number"> Coupon Code #5262555556666</p>
+
+        </div>
     </div>
-</div>
 
     <div style="text-align:center">
         <!-- <span class="dot" onclick="currentSlide(1)"></span> 
@@ -245,11 +247,18 @@
             </div>
 
         </div>
-        <div class="right-part">
-            <img src="https://rukminim1.flixcart.com/fk-p-flap/464/708/image/d6f827f6b3f87db8.jpg?q=70" width="100%"
-                height="100%" />
-
-
+        <div class="right-part wether-body">
+            <!-- <img src="https://rukminim1.flixcart.com/fk-p-flap/464/708/image/d6f827f6b3f87db8.jpg?q=70" width="100%"
+                height="100%" /> -->
+            <div id="wether-body">
+                <h2>Wether</h2>
+                <p id="city">.......... </p>
+                <p id="temp">..........</p>
+                <p id="day">.........</p>
+                <p id="date">.........</p>
+                <!-- <button onclick="geoloction()">getCurrentPosition</button> -->
+                <!--     -->
+            </div>
         </div>
     </div>
     <!-- 2nd row -->
@@ -740,8 +749,97 @@
             slides[slideIndex - 1].style.display = "block";
             // dots[slideIndex - 1].className += "active";
         }
-    
+
     </script>
+   
+    <!-- ==============================================Wether app script==================================================== -->
+    <!-- =========================date=============================== -->
+    </script>
+    <script>
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
+        </script>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+          case 0:
+            day = "Sunday";
+            break;
+          case 1:
+            day = "Monday";
+            break;
+          case 2:
+            day = "Tuesday";
+            break;
+          case 3:
+            day = "Wednesday";
+            break;
+          case 4:
+            day = "Thursday";
+            break;
+          case 5:
+            day = "Friday";
+            break;
+          case  6:
+            day = "Saturday";
+        }
+        document.getElementById("day").innerHTML = "Today is " + day;
+        </script>
+        <!-- ================all scipt=================== -->
+    <script>
+        let x = document.getElementById('out');
+        let y = document.getElementById('city');
+        let z = document.getElementById('temp');
+        function geoloction() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition)
+            }
+            else {
+                x.innerText = "geo loction was not supported"
+            }
+
+        }
+        function showPosition(data) {
+            console.log(data)
+            let lat = data.coords.latitude;
+            let long = data.coords.longitude;
+            // let out = `lat is ${lat}long is ${long} so on`
+            // x.innerText = out
+            const url = `http://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+
+            fetch(url, { method: 'GET' })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data)
+                    let city = (data.city.name);
+                    let temp = (data.list[0].temp.day);
+
+
+                    y.innerText = ` ${city}`
+                    z.innerText = ` ${temp} °C`
+
+
+                })
+        }
+
+    </script>
+    <script>
+        Window.onload = geoloction();
+    </script>
+    <!-- =========================coupn code random number script ======================= -->
+    <!-- <script>
+        function randomNumber() {
+            return Math.random()
+        }
+
+        document.write("Coupon Code # ")
+
+        // Function call
+        document.write(randomNumber(10,1));
+        document.getElementById('number')
+    </script> -->
+
+
 
 </body>
 
